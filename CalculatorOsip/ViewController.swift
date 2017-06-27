@@ -8,18 +8,60 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+ var isTypedSomething = false
 
+class ViewController: UIViewController {
+    
+    
+    
+    /*
+     input.enter(value: "1")
+     input.enter(value: "+")
+     input.enter(value: "1")
+     input.enter(value: "=")     */
+    
+    
+    @IBOutlet weak var Label: UILabel!
+    
+    var digit: String? = nil
+    
+    var output: OutputController!
+    var brain: Brain!
+    var input: InputController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        output = OutputController()
+        brain = Brain(with: output)
+        input = InputController(with: brain)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func OperationButton(_ sender: UIButton) {
+        isTypedSomething = false
+        let operationTitle = sender.currentTitle!
+        if let checkDigit = digit {
+            input.enter(value: checkDigit)
+        }
+        input.enter(value: operationTitle)
+        if sender.currentTitle! == "=" {
+            Label!.text = output.result
+        }
+        digit = nil
     }
-
-
+    
+    
+    @IBAction func NumButton(_ sender: UIButton) {
+        
+        digit = sender.currentTitle!
+        let textCurrentlyInDysplay = Label!.text!
+        
+        if !isTypedSomething {
+            Label.text = digit
+        } else {
+            Label!.text = textCurrentlyInDysplay + digit!
+        }
+        isTypedSomething = true    }
+    
+    
 }
 

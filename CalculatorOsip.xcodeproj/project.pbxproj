@@ -13,6 +13,10 @@
 		B2EB8A321F0132D000C29E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EB8A311F0132D000C29E9F /* Assets.xcassets */; };
 		B2EB8A351F0132D000C29E9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EB8A331F0132D000C29E9F /* LaunchScreen.storyboard */; };
 		B2EB8A401F0132D000C29E9F /* CalculatorOsipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB8A3F1F0132D000C29E9F /* CalculatorOsipTests.swift */; };
+		B2EB8A4D1F01337500C29E9F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB8A4C1F01337500C29E9F /* Protocols.swift */; };
+		B2EB8A4F1F01341200C29E9F /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB8A4E1F01341200C29E9F /* InputController.swift */; };
+		B2EB8A511F01342F00C29E9F /* OutputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB8A501F01342F00C29E9F /* OutputController.swift */; };
+		B2EB8A531F013FEC00C29E9F /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB8A521F013FEC00C29E9F /* Brain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		B2EB8A3B1F0132D000C29E9F /* CalculatorOsipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorOsipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EB8A3F1F0132D000C29E9F /* CalculatorOsipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOsipTests.swift; sourceTree = "<group>"; };
 		B2EB8A411F0132D000C29E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EB8A4C1F01337500C29E9F /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
+		B2EB8A4E1F01341200C29E9F /* InputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputController.swift; path = ../InputController.swift; sourceTree = "<group>"; };
+		B2EB8A501F01342F00C29E9F /* OutputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutputController.swift; path = ../OutputController.swift; sourceTree = "<group>"; };
+		B2EB8A521F013FEC00C29E9F /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Brain.swift; path = ../Brain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,12 @@
 		B2EB8A291F0132D000C29E9F /* CalculatorOsip */ = {
 			isa = PBXGroup;
 			children = (
-				B2EB8A2A1F0132D000C29E9F /* AppDelegate.swift */,
+				B2EB8A4C1F01337500C29E9F /* Protocols.swift */,
+				B2EB8A4E1F01341200C29E9F /* InputController.swift */,
+				B2EB8A521F013FEC00C29E9F /* Brain.swift */,
+				B2EB8A501F01342F00C29E9F /* OutputController.swift */,
 				B2EB8A2C1F0132D000C29E9F /* ViewController.swift */,
+				B2EB8A2A1F0132D000C29E9F /* AppDelegate.swift */,
 				B2EB8A2E1F0132D000C29E9F /* Main.storyboard */,
 				B2EB8A311F0132D000C29E9F /* Assets.xcassets */,
 				B2EB8A331F0132D000C29E9F /* LaunchScreen.storyboard */,
@@ -199,7 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2EB8A4F1F01341200C29E9F /* InputController.swift in Sources */,
+				B2EB8A4D1F01337500C29E9F /* Protocols.swift in Sources */,
 				B2EB8A2D1F0132D000C29E9F /* ViewController.swift in Sources */,
+				B2EB8A511F01342F00C29E9F /* OutputController.swift in Sources */,
+				B2EB8A531F013FEC00C29E9F /* Brain.swift in Sources */,
 				B2EB8A2B1F0132D000C29E9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +422,7 @@
 				B2EB8A461F0132D000C29E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2EB8A471F0132D000C29E9F /* Build configuration list for PBXNativeTarget "CalculatorOsipTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +431,7 @@
 				B2EB8A491F0132D000C29E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
